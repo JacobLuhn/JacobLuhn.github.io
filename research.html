@@ -37,7 +37,7 @@
                                     The "Retired" A-star program monitored the radial velocities of a sample of subgiants for nearly two decades with Keck-HIRES, discovering mroe than 50 planets orbiting such stars (see my 2019 paper <a href=https://ui.adsabs.harvard.edu/abs/2019AJ....157..149L/abstract>here</a> for some recent discoveries/candidates).
                                 </p>
                                 <p>As my thesis work showed, evolved stars are dominated by stellar variability driven by convective motions, specifically p-mode oscillations, the global surface deformations that result from pressure driven waves driven by convection that travel throughout the interior of the star.
-                                    These p-mode oscillations can have amplitudes 3–10 m/s, indicating that the residuals in these RV time series are dominated by stellar signals; we've hit an astrophysical floor that could be drowning out the signals of any companions in these systems!
+                                    These p-mode oscillations can have amplitudes 3–10 m/s, indicating that <b>the residuals in the RV time series of subgiants are dominated by stellar signals</b>; we've hit an astrophysical floor that could be drowning out the signals of any companions in these systems!
                                 </p>
                                 <p>Luckily, p-mode oscillations have a well understood temporal structure, with characteristic cycling behavior on timescales that are closely tied to stellar parameters (effective temperature and surface gravity). 
                                     For dwarf stars, we can mitigate the typical ~5 minute oscillations by choosing sufficiently long exposure times that average over the p-mode period.
@@ -50,6 +50,21 @@
                                 <p>We have implemented this approach on the Automated Planet Finder (APF) telescope, a fully robotic telescope at Lick Observatory dedicated to RV observations.
                                     It's robotic nature allows us to specify the unique intra-night cadence for each star, according to its p-mode oscillation timescale.
                                 </p>
+
+                                <p>We're calling this survey the <b>A</b>PF <b>A</b>-star <b>R</b>etirement <b>P</b>rogram (<b>AARP</b>), and the goals of our program are to:</p>
+                                <div id='container'>
+                                    <img src='images/aarp_logo.png' alt="" width="50%"/>
+                                    <ul style="list-style-type:none;">
+                                        <li><b> <font color="99C455">STRETCH OUT:</font> </b> <br> <em>Extend</em> the baseline on ~35 planet-hosting subgiants (long-period companions)</li>
+                                        <br>
+                                        <br>
+                                        <li><b> <font color="54B8D3">REVIVE:</font> </b> <br> <em>Re-establish</em> high-cadence observations now with APF (short-period companions)</li>
+                                        <br>
+                                        <br>
+                                        <li><b> <font color="D35A56">RELAX:</font></b> <br> Remove <em>jitter</em> with tailored observations to capture and bin down stellar oscillations</li>
+                                      </ul>  
+                                  </div>
+
                                 <p>We have a year of observations under our belt and our results show promise.
                                     APF has demonstrated excellent ability to achieve the desired intra-night cadences within +/-10 minutes.
                                     Our initial results indicate moderate improvement over HIRES and more importantly appear to perform better than the expected sqrt(2) reduction one would expect from 2 randomly separated observations in the night, assuming a white noise component.
