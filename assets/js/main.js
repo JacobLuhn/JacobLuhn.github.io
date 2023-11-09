@@ -56,7 +56,7 @@
 			.appendTo($body)
 			.panel({
 				delay: 500,
-				hideOnClick: false,
+				hideOnClick: true,
 				hideOnSwipe: true,
 				resetScroll: true,
 				resetForms: true,
