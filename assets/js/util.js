@@ -90,7 +90,7 @@
 					target: $this,
 
 				// Class to toggle.
-					visibleClass: 'visible'
+					visibleClass: 'is-menu-visible'
 
 			}, userConfig);
 
