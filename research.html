@@ -1,115 +1,154 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Research</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <title>Research</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Home</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="about_me.html">About Me</a></li>
-											<li><a href="research.html">Research</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
 
-				<!-- Main -->
-					<article id="main">
-						<header>
-							<h2>Research</h2>
-							<p></p>
-						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: none;
+  color: none;
+  cursor: pointer;
+  padding: 0px 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
 
-								<h3>The APF A-star Retirement Program (AARP)</h3>
-								<p>Subgiant stars (slightly evolved stars) are a relatively understudied population in planet searches, but represent a unique sample for probing how stellar evolution and stellar mass affect planet demographics. 
-                                    The "Retired" A-star program monitored the radial velocities of a sample of subgiants for nearly two decades with Keck-HIRES, discovering mroe than 50 planets orbiting such stars (see my 2019 paper <a href=https://ui.adsabs.harvard.edu/abs/2019AJ....157..149L/abstract>here</a> for some recent discoveries/candidates).
-                                </p>
-                                <p>As my thesis work showed, evolved stars are dominated by stellar variability driven by convective motions, specifically p-mode oscillations, the global surface deformations that result from pressure driven waves driven from convection that travel throughout the interior of the star.
-                                    These p-mode oscillations can have amplitudes 3–10 m/s, indicating that <b>the residuals in the RV time series of subgiants are dominated by stellar signals</b>; we've hit an astrophysical floor that could be drowning out the signals of any companions in these systems!
-                                </p>
-                                <p>Luckily, p-mode oscillations have a well understood temporal structure, with characteristic cycling behavior on timescales that are closely tied to stellar parameters (effective temperature and surface gravity). 
-                                    For dwarf stars, we can mitigate the typical ~5 minute oscillations by choosing sufficiently long exposure times that average over the p-mode period.
-                                    For subgiant stars&#8212;with sometimes hours-long cycles&mdash;this strategy simply isn't practical. 
-                                </p>
-                                <p>
-                                    Instead, I've devised a new survey strategy for evolved stars that aims to leverage the <em>anti</em>correlated nature of p-mode oscillations, by precisely spacing two observations in a night. 
-                                    By taking a second exposure separated by exactly half of the dominant p-mode oscillation timescale, the observations will bin down faster than typical sqrt(N) white noise, allowing us to probe below the p-mode floor.
-                                </p>
-                                <p>We have implemented this approach on the Automated Planet Finder (APF) telescope, a fully robotic telescope at Lick Observatory dedicated to RV observations.
-                                    It's robotic nature allows us to specify the unique intra-night cadence for each star, according to its p-mode oscillation timescale.
-                                </p>
+.active, .collapsible:hover {
+  background-color: #dbdbdb;
+}
 
-                                <p>We're calling this survey the <b>A</b>PF <b>A</b>-star <b>R</b>etirement <b>P</b>rogram (<b>AARP</b>), and the goals of our program are to:</p>
-                                <div id='container'>
-                                    <img src='images/aarp_logo.png' alt="" width="40%"/>
-                                    <ul style="list-style-type:none;">
-                                        <br>
-                                        <li><b> <font color="99C455">STRETCH OUT:</font> </b> <br> <em>Extend</em> the baseline on ~35 planet-hosting subgiants (long-period companions)</li>
-                                        <br>
-                                        <br>
-                                        <li><b> <font color="54B8D3">REVIVE:</font> </b> <br> <em>Re-establish</em> high-cadence observations now with APF (short-period companions)</li>
-                                        <br>
-                                        <br>
-                                        <li><b> <font color="D35A56">RELAX:</font></b> <br> Remove <em>jitter</em> with tailored observations to capture and bin down stellar oscillations</li>
-                                      </ul>  
-                                  </div>
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: none;
+}
+</style>
+</head>
 
-                                <p>We have a year of observations under our belt and our results show promise.
-                                    APF has demonstrated excellent ability to achieve the desired intra-night cadences within +/-10 minutes.
-                                    Our initial results indicate moderate improvement over HIRES and more importantly appear to perform better than the expected sqrt(2) reduction one would expect from 2 randomly separated observations in the night, assuming a white noise component.
-                                </p>
-                                <p>We're excited for the future of this program and the discoveries it will enable. Stay tuned for a first write-up of the survey and initial performance!</p>
-							</div>
-						</section>
-					</article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://twitter.com/jacobkluhn" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://github.com/JacobLuhn" class="icon brands fa-github"><span class="label">Twitter</span></a></li>
-							<li><a href="mailto:jluhn@uci.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+<body class="is-preload">
 
-			</div>
+    <!-- Page Wrapper -->
+        <div id="page-wrapper">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <!-- Header -->
+                <header id="header">
+                    <h1><a href="index.html">Home</a></h1>
+                    <script id="replace_with_navbar" src="assets/js/nav.js"></script>
+                </header>
 
-	</body>
-</html>
+            <!-- Main -->
+                <article id="main">
+
+                    <header>
+                        <h2>Research</h2>
+                        <p></p>
+                    </header>
+                    <section class="wrapper style5">
+                        <div class="inner">
+
+                        <p>Click on each below to learn more</p>
+
+                        <!-- <button type="button" class="collapsible">APF A-Star Retirement Program (AARP)</button> -->
+                        <!--AARP-->
+                        <h2 class="collapsible">The APF A-star Retirement Program (AARP)</h2>
+                        <div class="content">
+                            
+                            <p>Subgiant stars (slightly evolved stars) are a relatively understudied population in planet searches, but represent a unique sample for probing how stellar evolution and stellar mass affect planet demographics. 
+                                The "Retired" A-star program monitored the radial velocities of a sample of subgiants for nearly two decades with Keck-HIRES, discovering mroe than 50 planets orbiting such stars (see my 2019 paper <a href=https://ui.adsabs.harvard.edu/abs/2019AJ....157..149L/abstract>here</a> for some recent discoveries/candidates).
+                            </p>
+                            <p>As my thesis work showed, evolved stars are dominated by stellar variability driven by convective motions, specifically p-mode oscillations, the global surface deformations that result from convection-driven pressure waves that travel throughout the interior of the star.
+                                These p-mode oscillations can have amplitudes 3–10 m/s, indicating that <b>the residuals in the RV time series of subgiants are dominated by stellar signals</b>; we've hit an astrophysical floor that could be drowning out the signals of any companions less massive than Neptune/Saturn in these systems!
+                            </p>
+                            <p>Luckily, p-mode oscillations have a well understood temporal structure, with characteristic cycling behavior on timescales that are closely tied to stellar parameters (effective temperature and surface gravity). 
+                                For dwarf stars, we can mitigate the typical ~5 minute oscillations by choosing sufficiently long exposure times that average over the p-mode period.
+                                For subgiant stars&#8212;with sometimes hours-long cycles&mdash;this strategy simply isn't practical. 
+                            </p>
+                            <p>
+                                Instead, I've devised a new survey strategy for evolved stars that aims to leverage the <em>anti</em>correlated nature of p-mode oscillations, by precisely spacing two observations in a night. 
+                                By taking a second exposure separated by exactly half of the dominant p-mode oscillation timescale, the observations will bin down faster than typical sqrt(N) white noise, allowing us to probe below the p-mode floor.
+                            </p>
+                            <p>We have implemented this approach on the Automated Planet Finder (APF) telescope, a fully robotic telescope at Lick Observatory dedicated to RV observations.
+                                It's robotic nature allows us to specify the unique intra-night cadence for each star, according to its p-mode oscillation timescale.
+                            </p>
+
+                            <p>We're calling this survey the <b>A</b>PF <b>A</b>-star <b>R</b>etirement <b>P</b>rogram (<b>AARP</b>), and the goals of our program are to:</p>
+                            <div id='container'>
+                                <img src='images/aarp_logo.png' alt="" width="40%"/>
+                                <ul style="list-style-type:none;">
+                                    <br>
+                                    <li><b> <font color="99C455">STRETCH OUT:</font> </b> <br> <em>Extend</em> the baseline on ~35 planet-hosting subgiants (long-period companions)</li>
+                                    <br>
+                                    <br>
+                                    <li><b> <font color="54B8D3">REVIVE:</font> </b> <br> <em>Re-establish</em> high-cadence observations now with APF (short-period companions)</li>
+                                    <br>
+                                    <br>
+                                    <li><b> <font color="D35A56">RELAX:</font></b> <br> Remove <em>jitter</em> with tailored observations to capture and bin down stellar oscillations</li>
+                                </ul>  
+                            </div>
+
+                            <p>We have a year of observations under our belt and our results show promise.
+                                APF has demonstrated excellent ability to achieve the desired intra-night cadences within +/-10 minutes.
+                                Our initial results indicate moderate improvement over HIRES and more importantly appear to perform better than the expected sqrt(2) reduction one would expect from 2 randomly separated observations in the night, assuming a white noise component.
+                            </p>
+                            <p>We're excited for the future of this program and the discoveries it will enable. Stay tuned for a first write-up of the survey and initial performance!</p>
+                        </div>
+                        <br/>
+
+                        <!--Maunder Minimum-->
+                        <h2 class="collapsible">Maunder Minimum Star HD 166620</h2>
+                        <div class="content">
+                            <p>The Sun has an 11-year magnetic activity cycle, which can be traced back for centuries as seen in sunspot records. But there was a mysterious span of about 70 years (1645–1715) where there were significantly fewer sunspots, and its cycling behavior appeard to stop. The cycle picked back up shortly thereafter and has happily continued cycling ever since.</p>
+                            <div style="text-align:center"><img src='images/Sunspot_Numbers.png' alt="" width="70%"/></div>
+                            <br/>
+                            <p>What caused this "Maunder Minimum" (named after the solar astronomers Edward and Annie Maunder) remains unknown. It is an especially challenging problem to study given the timescales involved: our best knowledge comes from a 70-year period in a 400-year timespan. We can't just wait around and hope the Sun falls into another Maunder Minimum span.</p>
+                            <p>Instead, we turn to other stars. By observing many stars over decades, we can essentially build up a similar time baseline across all of the stars, and hope to catch one in a non-cycling state. This was one of the goals of the Mount Wilson Program, which was begun in the 1960s studied the activity levels&mdash;a proxy for star spots for stars where we can't resolve their surface features&mdash;for 100s of stars.</p>
+                            <p>While there have been some Maunder Minimum candidates proposed from those observations, many turned out to simply be slightly evolved subgiant stars, which in their old age become very slowly rotating stars with very little activity at all. This adds additional complications to the problem: non-cycling behavior alone isn't enough. What would be better is if we could <em>see</em> a star go from cycling to non-cycling, which considerably lengthens the necessary time baseline to make such a discovery.</em></p>
+                            <p>The California Planet Search helps in this regard; although it is an RV survey searching for planets around nearby bright stars, activity measurements come "for free" as part of their observations. We therefore continue to build on the legacy of the Mount Wilson Program with additional coverage time series that in some cases spans over 50 years of observations.</p>
+                            <p>Enter Penn State undergraduate student Anna Baum (now a graduate student at Lehigh university), who set out to properly unify the Mount Wilson Survey with the California Planet Search observations and update their classifications (cycling, non-cycling, aperiodic variability, etc.). The challenge is that the two activity measurements aren't entirely on the same scale, so it required a lot of checking by-eye. </p>
+                            <p>Among the 55 stars with over 5 decades of observations, Anna found one star that showed particularly odd behavior: <b>a cycling star in the Mount Wilson Survey appeared to suddenly go flat when later observed by the California Planet search!</b></p>
+                            <div style="text-align:center"><img src='images/p0.png' alt="" width="70%"/></div>
+                            <p>Unfortunately, the transition from cycling to non-cycling behavior occurred during this gap in observations, setting off lots of alarm bells. <em>Is this really the same star?</em> Anna performed countless checks and we became convinced: as best as we could tell, this was the same star, and the data were correct. Anna published this as the best Maunder Minimum candidate to date.</p>
+
+                            <br/>
+                            <p>Luckily, the story doesn't end there. Upon publication, it caught the attention of others, who were equally intrigued by this star. Thanks to Travis Metcalfe, we were pointed to some additional, unpublished Mount Wilson data for this star. Additionally, we learned that this target was observed in photometry by Greg Henry's Automate Photoelectric Telescope during the crucial gap of missing data and again in the 2010s. Putting those data together was the final nail in the coffin that laid to rest any lingering concerns.</p>
+                            <div style="text-align:center">
+                                <img src='images/p1.png' alt="" width="70%"/>
+                                <img src='images/p2.png' alt="" width="70%"/>
+                            </div>
+                            <p>This additional data (<a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...936L..23L/abstract"><span class="label">which I published in a short follow-up letter</span></a>) definitively trace out the star's transition from cycling to non-cycling behavior, <b>cementing HD 166620 as the first true Maunder Minimum analog!</b> With this, we can show that the non-cycling span looks no different from it's regular cycling minima (i.e., not particularly fainter or significantly "quieter"), lending credence to the idea that the Maunder Minimum is a regular part of the cycling process, with the expectation being that these spans of flat activity represent "sputtering" behavior that will increases in frequency as the star spins down and eventually becomes an old, quiet subgiant star! </p>
+                            <p>Now as a star on many RV survey target lists, HD 166620 will continue to be monitored in the coming decades. Only time will tell how long <em>its</em> Maunder Minimum will last...</p>
+                        </div>
+                        <br/>
+                        
+                    </section>
+                </article>
+        </div>
+</body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
